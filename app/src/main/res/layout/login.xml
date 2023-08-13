@@ -17,10 +17,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/welcomeTxt"
         android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:ems="10"
         android:hint="Enter UserName"
-        android:inputType="text" />
+        android:inputType="text"
+        android:text="" />
 
     <EditText
         android:id="@+id/password"
@@ -39,7 +43,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/password"
         android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:onClick="onClickSubmit"
         android:text="Submit" />
 
 

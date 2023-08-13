@@ -15,7 +15,7 @@
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="100dp"
         android:fontFamily="@font/londrina_shadow"
-        android:text="Shaya"
+        android:text="My Cart"
         android:textColor="@color/purple"
         android:textSize="50dp" />
 
