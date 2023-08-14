@@ -5,10 +5,13 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
 
 import java.util.ArrayList;
 
@@ -16,11 +19,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private LayoutInflater layoutInflater;
 
-    private ArrayList<String> data = new ArrayList<>();
+    private ArrayList<GroceryItem> data = new ArrayList<>();
 
+    private Context context;
 
-    Adapter(Context context, ArrayList<String> data) {
+    Adapter(Context context, ArrayList<GroceryItem> data) {
         this.layoutInflater = LayoutInflater.from(context);
+        this.context = context;
         this.data = data;
     }
 
@@ -34,10 +39,10 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // bind the textview and data received
+        holder.textTitle.setText(data.get(position).getTitle());
+        holder.textDesc.setText(data.get(position).getDesc());
 
-        String title = data.get(position);
-        holder.textTitle.setText(title);
-        // similarly can be set for images
+        Glide.with(context).asBitmap().load(data.get(position).getImageUrl()).into(holder.imageView);
     }
 
     @Override
@@ -46,7 +51,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    public void setData(ArrayList<String> data) {
+    public void setData(ArrayList<GroceryItem> data) {
         this.data = data;
         notifyDataSetChanged();
     }
@@ -55,10 +60,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
         TextView textTitle, textDesc;
 
+        ImageView imageView;
+
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             textTitle = itemView.findViewById(R.id.textTitle);
             textDesc = itemView.findViewById(R.id.textDesc);
+            imageView = itemView.findViewById(R.id.imageView);
         }
     }
 }
