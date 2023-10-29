@@ -62,4 +62,12 @@
         android:onClick="onClickCreate"
         android:text="Create" />
 
+    <ProgressBar
+        android:id="@+id/registerProgressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitButtonRegister"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
+
 </RelativeLayout>

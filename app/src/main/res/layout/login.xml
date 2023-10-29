@@ -22,8 +22,8 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:ems="10"
-        android:hint="Enter UserName"
-        android:inputType="text"
+        android:hint="Enter Email"
+        android:inputType="textEmailAddress"
         android:text="" />
 
     <EditText
@@ -32,10 +32,14 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/userName"
         android:layout_centerHorizontal="true"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:ems="10"
         android:hint="Enter Password"
-        android:inputType="textPassword" />
+        android:inputType="textPassword"
+        android:text="" />
 
     <Button
         android:id="@+id/submitButton"
@@ -49,6 +53,14 @@
         android:layout_marginBottom="10dp"
         android:onClick="onClickSubmit"
         android:text="Submit" />
+
+    <ProgressBar
+        android:id="@+id/loginProgressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/submitButton"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible" />
 
 
 </RelativeLayout>

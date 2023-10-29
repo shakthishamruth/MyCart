@@ -11,7 +11,9 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/londrina_shadow"
-        android:text="🛒 C A R T "
+        android:text="🛒 M Y C A R T"
+        android:textColor="@color/purple"
+        android:textColorHighlight="@color/purpleLight"
         android:textSize="30dp" />
 
     <androidx.recyclerview.widget.RecyclerView
