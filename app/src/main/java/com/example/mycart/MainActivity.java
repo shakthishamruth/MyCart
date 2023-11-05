@@ -33,7 +33,6 @@ public class MainActivity extends AppCompatActivity {
     // Login
     private EditText userName, password;
     private ProgressBar pb;
-
     private Intent intent;
 
     // Register

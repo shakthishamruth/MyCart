@@ -1,7 +1,11 @@
 package com.example.mycart;
 
+import static com.example.mycart.ConnectCart.CartID;
+
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -24,6 +28,8 @@ public class ViewCart extends AppCompatActivity {
 
     androidx.recyclerview.widget.RecyclerView recyclerView;
 
+    ProgressBar viewCartPB;
+
     Adapter adapter;
 
     @Override
@@ -32,33 +38,36 @@ public class ViewCart extends AppCompatActivity {
         setContentView(R.layout.activity_view_cart);
 
         recyclerView = findViewById(R.id.recyclerView);
+        viewCartPB = findViewById(R.id.viewCartPB);
         items = new ArrayList<>();
 
-        cartDBRef = FirebaseDatabase.getInstance().getReference("cart1");
-        cartDBRef.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                try {
-                    items.clear();
+        try {
+            cartDBRef = FirebaseDatabase.getInstance().getReference(CartID);
+            cartDBRef.addValueEventListener(new ValueEventListener() {
+                @Override
+                public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    viewCartPB.setVisibility(View.VISIBLE);
 
+                    items.clear();
                     for (DataSnapshot cartDatasnap : snapshot.getChildren()) {
                         GroceryItem item = cartDatasnap.getValue(GroceryItem.class);
                         items.add(item);
                     }
-
                     recyclerView.setLayoutManager(new LinearLayoutManager(ViewCart.this));
                     adapter = new Adapter(ViewCart.this, items);
                     recyclerView.setAdapter(adapter);
-                } catch (Exception e) {
-                    Toast.makeText(ViewCart.this, e.toString(), Toast.LENGTH_SHORT).show();
+
+                    viewCartPB.setVisibility(View.INVISIBLE);
                 }
-            }
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
+                @Override
+                public void onCancelled(@NonNull DatabaseError error) {
 
-            }
-        });
+                }
+            });
+        } catch (Exception e) {
+            Toast.makeText(this, e.toString(), Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

@@ -8,6 +8,7 @@ import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -20,14 +21,19 @@ public class Home extends AppCompatActivity {
     private TextView homeWelcomeText;
     private FirebaseUser currentUser;
 
+    public static boolean canViewFlag = false;
+
+    private Button home_ViewCart;
+
     @SuppressLint("SetTextI18n")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
-
+        home_ViewCart = findViewById(R.id.home_ViewCart);
         homeWelcomeText = findViewById(R.id.home_welcomeText);
         homeWelcomeText.setText("Welcome " + userEmail);
+        home_ViewCart.setEnabled(canViewFlag);
     }
 
     public void onClickHome_Logout(View view) {
@@ -40,7 +46,8 @@ public class Home extends AppCompatActivity {
     }
 
     public void onClickHome_ConnectCart(View view) {
-        Intent intent = new Intent(getApplicationContext(), ConnectBluetooth.class);
+        canViewFlag = true;
+        Intent intent = new Intent(getApplicationContext(), ConnectCart.class);
         startActivity(intent);
         finish();
     }

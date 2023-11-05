@@ -55,5 +55,4 @@ public class GroceryItem {
     public String toString() {
         return "GroceryItem{" + "title='" + title + '\'' + ", desc='" + desc + '\'' + ", imageUrl='" + imageUrl + '\'' + '}';
     }
-
 }

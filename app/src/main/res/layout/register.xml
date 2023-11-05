@@ -23,7 +23,7 @@
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
         android:ems="10"
-        android:hint="Enter New UserName"
+        android:hint="Enter New Email"
         android:inputType="text"
         android:text="" />
 
