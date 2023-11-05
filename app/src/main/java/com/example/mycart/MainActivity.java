@@ -12,7 +12,6 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -26,8 +25,6 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     // Adapter and RecyclerView
-    RecyclerView recyclerView;
-    Adapter adapter;
     ArrayList<GroceryItem> items;
 
     // Startup
@@ -53,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
     public static final String TEXT = "text";
     private String text;
 
+    // Database
     public static FirebaseAuth mAuth;
 
     @Override
@@ -75,15 +73,8 @@ public class MainActivity extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
 
         items = new ArrayList<>();
-        items.add(new GroceryItem("Panner", "100g", "https://milkpot.com/wp-content/uploads/2022/11/Artboard-1-768x768.png"));
-        items.add(new GroceryItem("Wheat", "1kg", "https://e7.pngegg.com/pngimages/4/305/png-clipart-atta-flour-whole-wheat-flour-flour-food-nutrition.png"));
-        items.add(new GroceryItem("Cheese", "500g", "https://static.wixstatic.com/media/f0fada_cd2a581765ec4111a6595a3e8a450d9b~mv2.png/v1/crop/x_0,y_0,w_685,h_324/fill/w_714,h_338,al_c,lg_1,q_85,enc_auto/Cheese%20Block.png"));
-        items.add(new GroceryItem("Maida", "1kg", "https://osiamart.com/image/cache/catalog/ProductImage/FMCG/FMCG/Loose/1645383082579_variant_5c135ae66994164bc9f7fde8_1-550x550.png"));
-        items.add(new GroceryItem("Bread", "", "https://pngimg.com/uploads/bread/bread_PNG2281.png"));
-        items.add(new GroceryItem("Milk", "1L", "https://www.bigbasket.com/media/uploads/p/xxl/70001832_2-amul-taaza-fresh-toned-milk.jpg"));
 
         startupLogIn = findViewById(R.id.startupLogIn);
-
     }
 
     /**
@@ -174,15 +165,6 @@ public class MainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), Home.class);
                         startActivity(intent);
                         finish();
-
-                    /*
-                    setContentView(R.layout.activity_main);
-                    recyclerView = findViewById(R.id.recyclerView);
-
-                    recyclerView.setLayoutManager(new LinearLayoutManager(MainActivity.this));
-                    adapter = new Adapter(MainActivity.this, items);
-                    recyclerView.setAdapter(adapter);
-                    */
 
                     } else {
                         // If sign in fails, display a message to the user.

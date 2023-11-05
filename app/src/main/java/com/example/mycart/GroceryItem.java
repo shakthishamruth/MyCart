@@ -5,6 +5,10 @@ public class GroceryItem {
     private String desc;
     private String imageUrl;
 
+    public GroceryItem() {
+        this.imageUrl = "https://cdn-icons-png.flaticon.com/512/1261/1261052.png";
+    }
+
     public GroceryItem(String title) {
         this.title = title;
         this.desc = "NA";

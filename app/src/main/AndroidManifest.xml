@@ -9,7 +9,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission
         android:name="android.permission.WRITE_EXTERNAL_STORAGE"
-        android:maxSdkVersion="32" />
+        android:maxSdkVersion="32"
+        tools:ignore="ScopedStorage" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -25,6 +26,9 @@
         android:theme="@style/Theme.MyCart"
         tools:targetApi="31">
         <activity
+            android:name=".ManualUpload"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
@@ -32,6 +36,16 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".ViewCart"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".ConnectBluetooth"
+            android:exported="true">
+
         </activity>
         <activity
             android:name=".Home"

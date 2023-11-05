@@ -38,4 +38,16 @@ public class Home extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void onClickHome_ConnectCart(View view) {
+        Intent intent = new Intent(getApplicationContext(), ConnectBluetooth.class);
+        startActivity(intent);
+        finish();
+    }
+
+    public void onClickHome_ViewCart(View view) {
+        Intent intent = new Intent(getApplicationContext(), ViewCart.class);
+        startActivity(intent);
+        finish();
+    }
 }
