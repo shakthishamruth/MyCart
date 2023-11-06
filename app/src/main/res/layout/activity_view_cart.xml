@@ -5,6 +5,13 @@
     android:layout_height="match_parent"
     tools:context=".ViewCart">
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        tools:srcCompat="@drawable/background" />
+
     <ProgressBar
         android:id="@+id/viewCartPB"
         android:layout_width="wrap_content"
@@ -17,11 +24,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:fontFamily="@font/londrina_shadow"
-        android:text="🛒 M Y C A R T"
+        android:fontFamily="@font/aclonica"
+        android:text="MY CART"
         android:textColor="@color/purple"
         android:textColorHighlight="@color/purpleLight"
-        android:textSize="30sp" />
+        android:textSize="32sp" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

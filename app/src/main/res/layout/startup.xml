@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        tools:srcCompat="@drawable/background" />
 
     <TextView
         android:id="@+id/startupTxt"
@@ -13,10 +22,10 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="100dp"
-        android:fontFamily="@font/londrina_shadow"
-        android:text="My Cart"
+        android:fontFamily="@font/aclonica"
+        android:text="MyCart"
         android:textColor="@color/purple"
-        android:textSize="50dp" />
+        android:textSize="32sp" />
 
     <RelativeLayout
         android:id="@+id/RelLayStartup"
@@ -28,9 +37,13 @@
             android:id="@+id/startupLogIn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
             android:onClick="onClickLogIn"
-            android:text="Log In" />
+            android:text="Log In"
+            app:icon="@drawable/login" />
 
         <Button
             android:id="@+id/startupReg"
@@ -42,7 +55,8 @@
             android:layout_marginBottom="5dp"
             android:layout_toEndOf="@+id/startupLogIn"
             android:onClick="onClickRegister"
-            android:text="Register" />
+            android:text="Register"
+            app:icon="@drawable/register" />
 
     </RelativeLayout>
 

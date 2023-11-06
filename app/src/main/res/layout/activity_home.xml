@@ -1,9 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Home">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/background"
+        tools:srcCompat="@drawable/background" />
 
     <TextView
         android:id="@+id/home_welcomeText"
@@ -12,8 +20,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="128dp"
         android:layout_marginBottom="32dp"
-        android:text="Welcome"
-        android:textSize="30sp" />
+        android:fontFamily="@font/aclonica"
+        android:text="👋"
+        android:textSize="20sp" />
 
     <Button
         android:id="@+id/home_ViewCart"
@@ -21,9 +30,11 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/home_connectCart"
         android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
         android:enabled="false"
         android:onClick="onClickHome_ViewCart"
-        android:text="View Cart" />
+        android:text="View Cart"
+        app:icon="@drawable/view" />
 
     <Button
         android:id="@+id/home_connectCart"
@@ -31,8 +42,10 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/home_welcomeText"
         android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
         android:onClick="onClickHome_ConnectCart"
-        android:text="Connect Cart" />
+        android:text="Connect Cart"
+        app:icon="@drawable/connect" />
 
     <Button
         android:id="@+id/home_logOut"
@@ -40,8 +53,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/home_ViewCart"
         android:layout_centerHorizontal="true"
+        android:layout_margin="5dp"
         android:onClick="onClickHome_Logout"
         android:text="LOGOUT"
-        android:textColor="@color/red" />
+        app:icon="@drawable/logout" />
 
 </RelativeLayout>

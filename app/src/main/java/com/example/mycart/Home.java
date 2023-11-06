@@ -32,7 +32,7 @@ public class Home extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         home_ViewCart = findViewById(R.id.home_ViewCart);
         homeWelcomeText = findViewById(R.id.home_welcomeText);
-        homeWelcomeText.setText("Welcome " + userEmail);
+        homeWelcomeText.setText("👋 " + userEmail);
         home_ViewCart.setEnabled(canViewFlag);
     }
 
