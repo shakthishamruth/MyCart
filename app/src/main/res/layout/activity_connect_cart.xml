@@ -24,6 +24,7 @@
         android:layout_marginBottom="5dp"
         android:fontFamily="@font/aclonica"
         android:text="Card ID"
+        android:textColor="@color/white"
         android:textSize="20dp" />
 
     <EditText
@@ -31,7 +32,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
         android:hint="Enter Cart ID      "
         android:inputType="text" />
 

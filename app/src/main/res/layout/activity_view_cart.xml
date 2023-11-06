@@ -26,7 +26,7 @@
         android:layout_centerHorizontal="true"
         android:fontFamily="@font/aclonica"
         android:text="MY CART"
-        android:textColor="@color/purple"
+        android:textColor="@color/white"
         android:textColorHighlight="@color/purpleLight"
         android:textSize="32sp" />
 

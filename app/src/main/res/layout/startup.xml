@@ -24,7 +24,7 @@
         android:layout_marginBottom="100dp"
         android:fontFamily="@font/aclonica"
         android:text="MyCart"
-        android:textColor="@color/purple"
+        android:textColor="@color/white"
         android:textSize="32sp" />
 
     <RelativeLayout
