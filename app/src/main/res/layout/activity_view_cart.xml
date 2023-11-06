@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -23,19 +24,42 @@
         android:id="@+id/textCart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:fontFamily="@font/aclonica"
-        android:text="MY CART"
-        android:textColor="@color/white"
+        android:layout_marginStart="20dp"
+        android:fontFamily="@font/lemon"
+        android:text="MyCart"
+        android:textColor="@color/purpleLight"
         android:textColorHighlight="@color/purpleLight"
         android:textSize="32sp" />
+
+    <TextView
+        android:id="@+id/textTotalAmt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:fontFamily="serif-monospace"
+        android:text="Total: ₹0"
+        android:textColor="@color/purple"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/textCart"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp" />
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="10dp"
+        android:text="Generate Bill"
+        app:icon="@drawable/bill" />
 
 </RelativeLayout>

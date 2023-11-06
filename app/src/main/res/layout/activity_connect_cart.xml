@@ -22,10 +22,10 @@
         android:layout_marginTop="5dp"
         android:layout_marginEnd="5dp"
         android:layout_marginBottom="5dp"
-        android:fontFamily="@font/aclonica"
-        android:text="Card ID"
-        android:textColor="@color/white"
-        android:textSize="20dp" />
+        android:fontFamily="@font/lemon"
+        android:text="Cart ID"
+        android:textColor="@color/purpleLight"
+        android:textSize="20sp" />
 
     <EditText
         android:id="@+id/CardIDTextField"

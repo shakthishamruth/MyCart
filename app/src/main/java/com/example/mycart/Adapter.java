@@ -19,11 +19,11 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
     private LayoutInflater layoutInflater;
 
-    private ArrayList<GroceryItem> data = new ArrayList<>();
+    private ArrayList<Item> data = new ArrayList<>();
 
     private Context context;
 
-    Adapter(Context context, ArrayList<GroceryItem> data) {
+    Adapter(Context context, ArrayList<Item> data) {
         this.layoutInflater = LayoutInflater.from(context);
         this.context = context;
         this.data = data;
@@ -36,11 +36,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return new ViewHolder(view);
     }
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         // bind the textview and data received
         holder.textTitle.setText(data.get(position).getTitle());
         holder.textDesc.setText(data.get(position).getDesc());
+        holder.textPrice.setText("₹" + data.get(position).getPriceString());
 
         Glide.with(context).asBitmap().load(data.get(position).getImageUrl()).into(holder.imageView);
     }
@@ -51,14 +53,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    public void setData(ArrayList<GroceryItem> data) {
+    public void setData(ArrayList<Item> data) {
         this.data = data;
         notifyDataSetChanged();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
 
-        TextView textTitle, textDesc;
+        TextView textTitle, textDesc, textPrice;
 
         ImageView imageView;
 
@@ -67,6 +69,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
             textTitle = itemView.findViewById(R.id.textTitle);
             textDesc = itemView.findViewById(R.id.textDesc);
             imageView = itemView.findViewById(R.id.imageView);
+            textPrice = itemView.findViewById(R.id.textPrice);
         }
     }
 }

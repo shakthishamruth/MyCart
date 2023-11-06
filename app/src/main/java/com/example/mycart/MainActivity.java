@@ -25,7 +25,7 @@ import java.util.ArrayList;
 public class MainActivity extends AppCompatActivity {
 
     // Adapter and RecyclerView
-    ArrayList<GroceryItem> items;
+    ArrayList<Item> items;
 
     // Startup
     Button startupLogIn;

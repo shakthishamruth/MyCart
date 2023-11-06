@@ -23,9 +23,9 @@
         android:layout_marginTop="10dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="10dp"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/lemon"
         android:text="Welcome 🤗"
-        android:textColor="@color/white"
+        android:textColor="@color/purpleLight"
         android:textSize="32sp" />
 
     <EditText

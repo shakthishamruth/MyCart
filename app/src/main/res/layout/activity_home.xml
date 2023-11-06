@@ -20,9 +20,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="128dp"
         android:layout_marginBottom="32dp"
-        android:fontFamily="@font/aclonica"
+        android:fontFamily="@font/lemon"
         android:text="👋"
-        android:textColor="@color/white"
+        android:textColor="@color/purpleLight"
         android:textSize="20sp" />
 
     <Button
