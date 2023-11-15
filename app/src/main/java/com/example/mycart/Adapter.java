@@ -17,11 +17,11 @@ import java.util.ArrayList;
 
 public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
-    private LayoutInflater layoutInflater;
+    private final LayoutInflater layoutInflater;
 
     private ArrayList<Item> data = new ArrayList<>();
 
-    private Context context;
+    private final Context context;
 
     Adapter(Context context, ArrayList<Item> data) {
         this.layoutInflater = LayoutInflater.from(context);
