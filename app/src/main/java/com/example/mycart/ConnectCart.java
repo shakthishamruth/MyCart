@@ -34,7 +34,7 @@ public class ConnectCart extends AppCompatActivity {
         try {
             IDtext = findViewById(R.id.CardIDTextField);
             CartID = IDtext.getText().toString();
-            Toast.makeText(this, IDtext.getText().toString(), Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, "Connected to " + IDtext.getText().toString(), Toast.LENGTH_SHORT).show();
             Intent intent = new Intent(getApplicationContext(), Home.class);
             startActivity(intent);
             finish();

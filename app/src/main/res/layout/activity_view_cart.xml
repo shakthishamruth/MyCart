@@ -60,6 +60,7 @@
         android:layout_marginEnd="15dp"
         android:layout_marginBottom="10dp"
         android:text="Generate Bill"
+        android:onClick="onClickGenerateBill"
         app:icon="@drawable/bill" />
 
 </RelativeLayout>

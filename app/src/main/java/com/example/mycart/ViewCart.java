@@ -90,4 +90,8 @@ public class ViewCart extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
+    public void onClickGenerateBill(View view) {
+        Toast.makeText(this, "Total Amount: ₹" + Total, Toast.LENGTH_LONG).show();
+    }
 }
