@@ -24,6 +24,7 @@ public class ConnectCart extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
+        super.onBackPressed();
         Intent intent = new Intent(getApplicationContext(), Home.class);
         startActivity(intent);
         finish();
