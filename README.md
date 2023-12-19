@@ -1,6 +1,6 @@
 # MyCart
 
-MyCart allows users to log in if they already have an account. If the customer doesn't have an account, they can register. After logging in, the customer needs to connect to a basket, and then they can view the cart.
+MyCart allows users to log in if they already have an account. If the customer doesn't have an account, they can register. After logging in, the customer needs to connect to a basket/cart, and then they can view the items in basket/cart.
 
 
 ## Hardware Used
