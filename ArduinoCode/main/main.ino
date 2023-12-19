@@ -8,9 +8,11 @@
 #include <ESP8266WiFi.h>
 #include <SPI.h>
 #include <MFRC522.h>
+// #include <map> // can use map
+// using namespace std;
 
-#define _SSID ""                                                       // Your WiFi SSID
-#define _PASSWORD ""                                               // Your WiFi Password
+#define _SSID ""          // Your WiFi SSID
+#define _PASSWORD ""      // Your WiFi Password
 #define REFERENCE_URL ""  // Your Firebase project reference url
 
 Firebase firebase(REFERENCE_URL);
@@ -57,7 +59,6 @@ void setup() {
 }
 
 void loop() {
-  // Nothing
   if (!rfid.PICC_IsNewCardPresent())
     return;
   if (rfid.PICC_ReadCardSerial()) {
@@ -65,6 +66,7 @@ void loop() {
       tag += rfid.uid.uidByte[i];
     }
     Serial.println(tag);
+    // Can use map
     if (tag == "21713321620") {
       firebase.setString("basket3/item1/title", "Kerchief");
       firebase.setString("basket3/item1/desc", "5N");
