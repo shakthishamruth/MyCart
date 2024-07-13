@@ -7,5 +7,9 @@ MyCart allows users to log in if they already have an account. If the customer d
 - ESP8266
 - RFID RC522 Reader
 
+## Contributors
+- Yagavi K
+- Shakthi Shamruth Dhamotharan
+
 ## 
 [Link to ESP8266Firebase Repository](https://github.com/Rupakpoddar/ESP8266Firebase)
